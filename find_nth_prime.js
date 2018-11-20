@@ -31,3 +31,4 @@ if( primeCandidateOfPrimeNumbers > 1){
 if( primeCandidate == 0){
   console.log("invalid input");
 }
+

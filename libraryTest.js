@@ -14,3 +14,4 @@ const testLib = function(funRef,num1,num2,expected){
 testLib(sum,3,4,7);
 testLib(sum,4,5,9);
 testLib(sub,7,5,2);
+
