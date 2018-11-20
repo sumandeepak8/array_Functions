@@ -1,5 +1,5 @@
 const {equal,deepEqual} = require('assert');
-const lib = require('./array_Functions.js');
+const lib = require('../src/library.js');
 
 const {slice} = lib;
 const {fill} = lib;
