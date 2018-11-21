@@ -101,7 +101,7 @@ describe("array functions",function(){
     });
 
     it("it should give undefined as sum",function(){
-      deepEqual(reduce(sum,[]),undefined);
+      deepEqual(reduce(sum,[],0),0);
     });
 
     it("if the given array is empty than it should give the 0 or initial value of sum",function(){
