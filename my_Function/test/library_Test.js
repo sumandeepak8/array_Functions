@@ -117,7 +117,7 @@ describe("array functions",function(){
     });
 
     it("it should return the multiple of all elements of an array",function(){
-      deepEqual(reduce(multiple,[1,2,3,4]),24);
+      deepEqual(reduce(multiple,[1,2,3,4]),25);
     });
 
     it("it should return the multiple of all elements of array and initial value if we provide",function(){
