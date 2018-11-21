@@ -25,7 +25,7 @@ const sum = function(accumulator,element){
   return accumulator+element;
 }
 
-const factorial = function(accumulator,element) {
+const multiple = function(accumulator,element) {
   return accumulator*element;
 }
 
@@ -112,16 +112,16 @@ describe("array functions",function(){
       deepEqual(reduce(sum,[1,-1],-2),-2);
     });
 
-    it("factorial",function(){
-      deepEqual(reduce(factorial,[1]),1);
+    it("multiple",function(){
+      deepEqual(reduce(multiple,[1]),1);
     });
 
-    it("factorial",function(){
-      deepEqual(reduce(factorial,[1,2,3,4]),24);
+    it("multiple",function(){
+      deepEqual(reduce(multiple,[1,2,3,4]),24);
     });
 
-    it("factorial",function(){
-      deepEqual(reduce(factorial,[1,4,5,0]),0);
+    it("multiple",function(){
+      deepEqual(reduce(multiple,[1,4,5,0]),0);
     });
 
   });
