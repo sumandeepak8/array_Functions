@@ -40,6 +40,12 @@ const reduce = function(functionRef,elements,accumulator = elements[0]) {
   return accumulator;
 }
 
+// what does functionRef take? - value or what value, what element? element of array. 
+// not what is functionRef?
+const someFunc = function(functionRef, array) {
+  typeof functionReaf;
+}
+
 exports.slice = slice;
 exports.fill = fill;
 exports.filter = filter;

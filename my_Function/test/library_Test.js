@@ -108,19 +108,19 @@ describe("array functions",function(){
       deepEqual(reduce(sum,[],2),2);
     });
 
-    it("sum",function(){
+    it("it should return sum of elements of array and initial value",function(){
       deepEqual(reduce(sum,[1,-1],-2),-2);
     });
 
-    it("multiple",function(){
+    it("it should give the element if the array has single element",function(){
       deepEqual(reduce(multiple,[1]),1);
     });
 
-    it("multiple",function(){
+    it("it should return the multiple of all elements of an array",function(){
       deepEqual(reduce(multiple,[1,2,3,4]),24);
     });
 
-    it("multiple",function(){
+    it("it should return the multiple of all elements of array and initial value if we provide",function(){
       deepEqual(reduce(multiple,[1,4,5,0]),0);
     });
 
