@@ -1,15 +1,24 @@
 const {equal,deepEqual} = require('assert');
 const lib = require('../src/library.js');
 
-const {slice} = lib;
-const {fill} = lib;
-const {filter} = lib;
-const {map} = lib;
-const {reduce} = lib;
+const {
+  slice,
+  fill,
+  filter,
+  map,
+  reduce,
+  recursiveMap,
+  recursiveReduce,
+  recursiveFilter,
+} = lib;
 
 const isEven = function(element){
   if(element%2 == 0)
     return element;
+}
+
+const increment = function(element) {
+  return element++;
 }
 
 const isOdd = function(element){
@@ -117,7 +126,7 @@ describe("array functions",function(){
     });
 
     it("it should return the multiple of all elements of an array",function(){
-      deepEqual(reduce(multiple,[1,2,3,4]),25);
+      deepEqual(reduce(multiple,[1,2,3,4]),24);
     });
 
     it("it should return the multiple of all elements of array and initial value if we provide",function(){
@@ -125,4 +134,29 @@ describe("array functions",function(){
     });
 
   });
+
+  describe("test for recursiveMap,it should work same as map function",function(){
+
+    it("it should give the sum increment numbers by one as map can",function(){
+      deepEqual(recursiveMap(increment,[1,2,3,4,5,6]),map(increment,[1,2,3,4,5,6]));
+    });
+    it("it should give an empty array if input is empty array",function(){
+      deepEqual(recursiveMap(increment,[]),map(increment,[]));
+    });
+  });
+
+ describe("test for recursiveReduce",function(){
+
+    it("it should return the sum of array as function reduce did",function(){
+      deepEqual(recursiveReduce(sum,[1,2,3,4]),reduce(sum,[1,2,3,4]));
+    });
+  });
+
+  describe("test for recursiveFilter",function(){
+
+    it("it should filter all the even elements as filter did",function(){
+      deepEqual(recursiveFilter(isEven,[1,2,3,4,5,8]),filter(isEven,[1,2,3,4,5,8]));
+    });
+  });
+
 });
